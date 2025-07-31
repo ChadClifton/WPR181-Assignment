@@ -1,0 +1,126 @@
+/* Styling for the slider container */
+#slider {
+  margin: 0 auto; /* Center align horizontally */
+  width: 1000px; /* Fixed width for the slider */
+  max-width: 100%; /* Ensure responsiveness */
+  text-align: center; /* Center align contents */
+}
+
+/* Hide radio inputs */
+#slider input[type=radio] {
+  display: none;
+}
+
+/* Styling for slider labels (slides) */
+#slider label {
+  cursor: pointer; /* Change cursor on hover */
+  text-decoration: none; /* Remove default text decoration */
+}
+
+/* Styling for the slides container */
+#slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for overflow container */
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Styling for individual slides using radio buttons */
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+/* Similar styles for slide3 and slide4 */
+
+/* Styling for the inner container of slides */
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 400%;
+  height: 400px;
+}
+
+/* Styling for individual slides */
+#slides .slide {
+  width: 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+/* Similar styles for slide_1, slide_2, slide_3, and slide_4 */
+
+/* Styling for the controls container */
+#controls {
+  margin: -225px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+
+/* Styling for control labels (next/previous buttons) */
+#controls label {
+  transition: opacity 0.2s ease-out;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  background-size: cover;
+  background-color: white;
+  border-radius: 50%;
+}
+/* Similar styles for hovered control labels */
+
+/* Styling for specific control labels based on checked radio button */
+/* Styles for slide1, slide2, slide3, and slide4 controls */
+
+/* Styling for the bullets container */
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+
+/* Styling for bullet labels */
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+/* Similar styles for active bullet labels */
+
+/* Media query for responsiveness */
+@media screen and (max-width: 900px) {
+  /* Adjust control label margins for smaller screens */
+  /* Adjust maximum width and margin for the slides container */
+}
+
+/* Styling for h2 elements */
+h2 {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 40px;
+}
+
+/* Styling for p elements */
+p {
+  text-align: center;
+}
+
+/* Styling for specific paragraph with ID 'p' */
+#p {
+  margin-left: 10px;
+  margin-right: 10px;
+}

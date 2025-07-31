@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Internet</title>
+    <link rel="stylesheet" href="./css/internetProtocols.css">
+    <link rel="stylesheet" href="./css/navMenu.css">
+</head>
+<body id="scroll-container">
+    <a href="https://front.codes/" class="logo" target="_blank"></a>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="OverviewOfWWW.html">Overview of the World Wide Web</a></li>
+            <li><a href="HistoryOfInternet.html">History of the internet</a></li>
+            <li><a href="WWW vs Internet.html">WWW vs the internet</a></li>
+            <li><a href="EvolutionOfInternt.html">Evolution of the internet</a></li>
+            <li><a href="internetProtocols.html">Internet protocols</a></li>
+            <li><a href="webApplicationArch.html">Web application architecture</a></li>
+            <li><a href="Client-side and Server-side Engineering.html">Client-side and Server-side Engineering</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+        </nav>
+
+        <h1 class="mb-0">Internet Protocols</h1>
+
+    <main>
+            <section class="definition">
+            <h2>IP Definition</h2>
+            <p>“Internet Protocol (IP) is the principal set (or communications protocol) of digital message formats and rules for exchanging messages between computers across a single network or a series of interconnected networks, using the Internet Protocol Suite (often referred to as TCP/IP). Messages are exchanged as datagrams, also known as data packets or just packets.” - Rouse, M. (2023) Internet protocol, Techopedia.</p>
+            <p>IP is a set of communication instructions that have four layers:</p>
+            <ul>
+                <li>Link Layer (lowest)</li>
+                <li>Internet Layer</li>
+                <li>Transport Layer</li>
+                <li>Application layer (highest)</li>
+            </ul>
+            <img src="./css/images/networkProtocols.png" alt="Network Protocols" id="np">
+        </section>
+
+        <section class="task">
+            <h2>Task of IP</h2>
+            <p>The main task of IP is to transport datagrams from the host source to the destination source, exp: Sending a picture from a phone to a laptop. The IP accomplishes this by putting a “tag” within the datagrams, the tags usually contain address information, and this whole process is called encapsulating.</p>
+            <p>The steps that an IP takes is like how mail and packages are shipped and delivered. The datagram is encapsulated and sent into the internet by the source host. The datagram holds the “tag” which is the address of the destination source.</p>
+            <p>“Note: IP is actually a connectionless protocol, meaning that the circuit to the receiver (destination host) does not need be set up before transmission (by the source host). Continuing the analogy, there does not need to be a direct connection between the physical return address on the letter/package and the recipient address before the letter/package is sent.” - Rouse, M.1974</p>
+            <p>The most complex job of IP is to address and route the datagrams. As Rouse, M states; “However, intelligence in the network is located at nodes (network interconnection points) in the form of routers which forward datagrams to the next known gateway on the route to the final destination.” These routers use what are called IGP, interior gateway protocols, pr EGP, external gateway protocols to help with the routing process. The route is also determined by the prefix in the datagram.</p>
+        </section>
+
+        <section class="versions">
+            <h2>IP Versions</h2>
+            <p>Since IP is the most important protocol of the Internet, many different version of it have been made since its creation in 1974. Currently IP version 4 (IPv4) is the most common and used version, however, version 6 (IPv6) does exist and is gaining popularity across the world.</p>
+        </section>
+    </main>
+</body>
+</html>

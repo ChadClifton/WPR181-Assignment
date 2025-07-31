@@ -1,0 +1,81 @@
+/* Styling for the overall page body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ececee;
+    background-color: #1f2029;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 4%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Styling for the timeline section */
+.timeline {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    color: white;
+    overflow: visible;
+}
+
+/* Styling for each timeline component */
+.timeline__component {
+    margin: 0 20px 20px 20px;
+}
+
+/* Styling for the background of timeline components */
+.timeline__component--bg {
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Styling for right-aligned date in timeline */
+.timeline__date--right {
+    text-align: right;
+}
+
+/* Styling for the middle section of timeline */
+.timeline__middle {
+    position: relative;
+    background: white;
+}
+
+/* Styling for the timeline point */
+.timeline__point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Styling for the bottom-aligned timeline point */
+.timeline__point--bottom {
+    top: initial;
+    bottom: 0;
+}
+
+/* Styling for the paragraph within timeline components */
+.timeline__paragraph {
+    line-height: 1.5;
+}
+
+/* Styling for general paragraphs */
+p {
+    text-align: center;
+}

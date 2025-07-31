@@ -1,0 +1,49 @@
+/*Creating the grid template*/
+main{
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-gap: 1em;
+}
+
+/*Styling the section tag that holds the content*/
+section{
+    padding: 1em;
+    border: 5px solid #ffeba7;
+    border-radius: 1em;
+}
+
+/*Populating the grid cells with the classes created in html*/
+.intro{
+    grid-row: 1;
+    max-width: 60em;
+    margin: auto; /*Centers the entire section in the cell*/
+}
+
+.define{
+    grid-row: 2;
+}
+
+.side{
+    grid-row: 3;
+    max-width: 80em;
+    margin: auto; /*Centers the entire section in the cell*/
+    margin-bottom: 1em; /*Creates space beneath this section, it no longer sits on the bottom of the page*/
+}
+
+/*Positions and Styles the different images according to their ID in html*/
+#bluePrint{
+    float: right;
+    padding: 1em;
+}
+
+#clientServer{
+    width: 16em;
+    float: left;
+    margin-right: 1em; /*Creates space between the image and the text to the right of it*/
+}
+
+/*Styling the h2, which is a heading, to be underlined*/
+h2{
+    text-decoration: underline;
+    text-align: center;
+}

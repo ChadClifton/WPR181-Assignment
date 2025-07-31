@@ -1,0 +1,382 @@
+/* Importing the Montserrat font with various weights for usage */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Styling for the entire body of the page */
+body {
+  /* Font styles and basic typography */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ececee;
+
+  /* Background styles */
+  background-color: #1f2029;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+
+  /* Sizing and positioning */
+  min-height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Styling for the main content centering */
+.section-center {
+  /* Positioning for centering */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+/* Styling for main heading */
+h1 {
+  /* Font styles for the heading */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 6vw;
+  line-height: 1;
+  color: #ffeba7;
+  text-align: center;
+}
+
+/* Styling for checkboxes */
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  /* Positioning to hide checkboxes */
+  position: absolute;
+  left: -9999px;
+}
+
+/* Styling for menu icon and label */
+.menu-icon:checked + label,
+.menu-icon:not(:checked) + label {
+  /* Positioning and display for the menu icon */
+  position: fixed;
+  top: 63px;
+  right: 75px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Styling for the icon's appearance before checkbox is checked */
+.menu-icon:checked + label:before,
+.menu-icon:not(:checked) + label:before {
+  /* Positioning and styles for the icon's appearance */
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #ececee;
+  border-bottom: 2px solid #ececee;
+
+  /* Transitions for animation effects */
+  transition: border-width 100ms 1500ms ease, 
+              top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms ease,
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Styling for the icon's appearance after checkbox is checked */
+.menu-icon:checked + label:after,
+.menu-icon:not(:checked) + label:after {
+  /* Positioning and styles for the second part of the icon */
+  position: absolute;
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  z-index: 20;
+  top: 10px;
+  right: 4px;
+  background-color: #ececee;
+  margin-top: -1px;
+
+  /* Transition for the animation effect */
+  transition: width 100ms 1750ms ease, 
+              right 100ms 1750ms ease,
+              margin-top 100ms ease, 
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Styling for the icon's appearance before checkbox is checked */
+.menu-icon:checked + label:before {
+  /* Positioning and styles for the top icon line when checked */
+  top: 10px;
+  transform: rotate(45deg);
+  height: 2px;
+  background-color: #ececee;
+  border-width: 0;
+
+  /* Transition for the animation effect */
+  transition: border-width 100ms 340ms ease, 
+              top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms 500ms ease,
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Styling for the icon's appearance after checkbox is checked */
+.menu-icon:checked + label:after {
+  /* Positioning and styles for the bottom icon line when checked */
+  width: 30px;
+  margin-top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+
+  /* Transition for the animation effect */
+  transition: width 100ms ease,
+              right 100ms ease,  
+              margin-top 100ms 500ms ease, 
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Styling for the navigation container */
+.nav {
+  /* Positioning, display, and sizing */
+  position: fixed;
+  top: 33px;
+  right: 50px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+
+  /* Overflow and shadow styles */
+  overflow: hidden;
+  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
+
+  /* Background and animation styles */
+  background-color: #353746;
+  animation: border-transform 7s linear infinite;
+
+  /* Transitions for animation effects */
+  transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
+              right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 1100ms ease,
+              width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Keyframes animation for border transformation */
+@keyframes border-transform {
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+}
+
+/* Styling for the navigation container when the menu icon is checked */
+.menu-icon:checked ~ .nav {
+  /* Pausing the animation, transforming, and sizing */
+  animation-play-state: paused;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+
+  /* Transitions for animation effects */
+  transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),  
+              right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 700ms ease,
+              width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Styling for the navigation list container */
+.nav ul {
+  /* Positioning, display, and sizing */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+/* Styling for navigation list items */
+.nav ul li {
+  /* Positioning and display */
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  list-style: none;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+
+  /* Transition for animation effect */
+  transition: all 250ms linear;
+}
+
+/* Styling for navigation list items with delays for animation */
+.nav ul li:nth-child(1) {
+  transition-delay: 200ms;
+}
+.nav ul li:nth-child(2) {
+  transition-delay: 150ms;
+}
+.nav ul li:nth-child(3) {
+  transition-delay: 100ms;
+}
+.nav ul li:nth-child(4) {
+  transition-delay: 50ms;
+}
+
+/* Styling for navigation list item links */
+.nav ul li a {
+  /* Font styles for the links */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  color: #ececee;
+
+  /* Transition for animation effect */
+  transition: all 250ms linear;
+}
+
+/* Styling for navigation list item link hover effect */
+.nav ul li a:hover {
+  text-decoration: none;
+  color: #ffeba7;
+}
+
+/* Styling for navigation list items when menu icon is checked */
+.menu-icon:checked ~ .nav ul li {
+  /* Enabling items, showing them, and transforming */
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+
+  /* Transition for animation effect */
+  transition: opacity 350ms ease,
+              transform 250ms ease;
+}
+
+/* Styling for specific navigation list items when menu icon is checked */
+.menu-icon:checked ~ .nav ul li:nth-child(1) {
+  transition-delay: 1400ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(2) {
+  transition-delay: 1480ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(3) {
+  transition-delay: 1560ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(4) {
+  transition-delay: 1640ms;
+}
+
+/* Styling for the logo container */
+.logo {
+  /* Positioning, display, and z-index */
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  display: block;
+  z-index: 11;
+
+  /* Transition for animation effect */
+  transition: all 250ms linear;
+}
+
+/* Styling for the logo image */
+.logo img {
+  /* Sizing for the logo image */
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 991px) {
+  /* Adjusting styles for smaller screens */
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label {
+    right: 55px;
+  }
+  .logo {
+    left: 30px;
+  }
+  .nav {
+    right: 30px;
+  }
+  h1 {
+    font-size: 9vw;
+    -webkit-text-stroke: 2px transparent;
+    -webkit-text-fill-color: #ffeba7;
+    color: #ffeba7;
+  }
+  .nav ul li a {
+    font-size: 8vh;
+  }
+}
+
+/* Styling for the custom scrollbar in the scroll container */
+#scroll-container {
+  height: 900px;
+  overflow-y: scroll;
+}
+
+/* Styling for the scrollbar track */
+#scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Styling for the scrollbar thumb */
+#scroll-container::-webkit-scrollbar-thumb {
+  background: #ffeba7;
+  height: 10px;
+  width: 10px;
+}
+
+/* Styling for the scrollbar thumb on hover */
+#scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* Hiding scrollbar buttons */
+#scroll-container::-webkit-scrollbar-button {
+  display: none;
+}

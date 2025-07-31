@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+/* Importing a font from Google Fonts */
+
+body{
+  overflow: visible;
+}
+
+/* Setting the body overflow to visible */
+
+.container{
+  
+  display: grid;
+  width: 100%;
+  height: 100%;
+  column-gap: 1%;
+  row-gap: -10%;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: minmax(100px,auto);
+  padding-bottom: 2%;
+  overflow: hidden;
+}
+
+/* Styling for a grid container with various layout properties */
+
+.heading1{
+  display: box;
+  grid-column: 1/3;
+  grid-row: 2;
+  padding-top: 10%;
+
+}
+
+/* Styling for a heading element */
+
+.p2{
+  display: block;
+  grid-column: 2/3;
+  grid-row: 3;
+  width: 70%;
+  height: auto;
+  background: linear-gradient(transparent);
+  border-width: 1px;
+  margin: 90px;
+  text-align: center;
+  box-shadow: #413616;
+  margin-right: 10%;
+}
+
+/* Styling for a block element */
+
+.p22{
+  display: block;
+  grid-column: 1/2;
+  grid-row: 3;
+  border-radius: 10px;
+  border: 5px solid #ffeba7;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  margin : 90px;
+}
+
+/* Styling for another block element with specific borders and layout */
+
+.p3{
+  grid-column: 1/2;
+  grid-row: 5;
+  display: block;
+  width: 70%;
+  height: auto;
+  background: linear-gradient(transparent);
+  border-width: 1px;
+  margin: 90px;
+  text-align: center;
+  box-shadow: #413616;
+  margin-right: 10%;
+}
+
+/* Styling for another block element similar to .p2 */
+
+.p33{
+  display: block;
+  grid-column: 2/3;
+  grid-row: 5;
+  border-radius: 10px;
+  border: 5px solid #ffeba7;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  margin : 90px;
+}
+
+/* Styling for another block element similar to .p22 */
+
+.p4{
+  grid-column: 2/3;
+  grid-row: 7;
+  display: block;
+  width: 70%;
+  height: auto;
+  background: linear-gradient(transparent);
+  margin: 90px;
+  text-align: center;
+  box-shadow: #413616;
+  margin-right: 10%;
+}
+
+/* Styling for another block element similar to .p2 */
+
+.p44{
+  display: block;
+  grid-column: 1/2;
+  grid-row: 7;
+  border-radius: 10px;
+  border: 5px solid #ffeba7;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  margin : 90px;
+}
+
+/* Styling for another block element similar to .p22 */
+
+.p5{
+  grid-column: 1/2;
+  grid-row: 9;
+  display: block;
+  width: 70%;
+  height: auto;
+  background: linear-gradient(transparent);
+  margin: 90px;
+  text-align: center;
+  box-shadow: #413616;
+  margin-right: 10%;
+}
+
+/* Styling for another block element similar to .p2 */
+
+.p55{
+  display: block;
+  grid-column: 2/3;
+  grid-row: 9;
+  border-radius: 10px;
+  border: 5px solid #ffeba7;
+  width: 78%;
+  height: auto;
+  text-align: center;
+  margin : 90px;
+  font-family: 'Fira Mono', monospace;
+}
+
+/* Styling for a block element with specific font and layout */
+
+article{
+  animation: glitch 1s linear infinite;
+}
+
+/* Styling for an article element with animation */
+
+/* Keyframes for the animation */
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+/* Pseudo-elements for glitch effect */
+article:before,
+article:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+/* Styling for before and after pseudo-elements */
+
+/* Keyframes for the top glitch effect */
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+/* Pseudo-element for top glitch effect */
+article:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+/* Keyframes for the bottom glitch effect */
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+/* Pseudo-element for bottom glitch effect */
+article:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+/* Styling for an element with a text background */
+#textbackground {
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Styling for images */
+img {
+  width: auto;
+  height: 150px;
+}
+
+/* Styling for h2 elements */
+h2 {
+  padding: 10%;
+}
+
+/* Styling for div elements */
+div {
+  font-size: 25px;
+}
+
+/* Styling for h1 elements */
+h1 {
+  margin-top: -6%;
+  padding-bottom: 100px;
+}
+
+/* Styling for an image with class imgTim */
+.imgTim {
+  padding-bottom: 10px;
+}

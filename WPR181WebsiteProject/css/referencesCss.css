@@ -1,0 +1,83 @@
+.navigationCenter{
+  grid-row: 2;
+  text-decoration: none;
+  list-style: none;
+  color:#ffeba7 ;
+}
+
+/* Styling for a navigation element in the center */
+/* Grid row is set to 2, likely for positioning */
+/* Removing text decoration and list styles from the navigation */
+/* Setting the color of the text to a light yellow (#ffeba7) */
+
+.navigationCenter li{
+  padding: 0.5em;
+}
+
+/* Styling for list items within the navigation */
+/* Adding padding to create spacing around the list items */
+
+.navigationCenter li a{
+  text-decoration: none;
+  color: #ffeba7;
+  font-size: 1.6em;
+}
+
+/* Styling for links within the navigation */
+/* Removing text decoration from links */
+/* Setting the color of links to a light yellow (#ffeba7) */
+/* Setting the font size to 1.6em (relative to the parent element's font size) */
+
+.navigationCenter li a:hover{
+  text-decoration: underline;
+  color: white;
+  background-color: rgb(97, 92, 92);
+}
+
+/* Styling for links within the navigation when hovered */
+/* Adding underline to hovered links */
+/* Changing the color to white */
+/* Adding a background color of rgb(97, 92, 92) to the hovered links */
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 5.5vw;
+  line-height: 1;
+  color: #ffeba7;
+  text-align: center;
+  -webkit-text-stroke: 2px #ffeba7;
+  
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+  
+}
+
+/* Styling for h2 elements */
+/* Setting the font family to 'Montserrat' or a similar sans-serif font */
+/* Setting the font weight to 600 (semi-bold) */
+/* Setting the font size to 5.5% of the viewport width */
+/* Setting the line height to 1 (normal) */
+/* Setting the text color to a light yellow (#ffeba7) */
+/* Center-aligning the text */
+/* Adding a 2px wide stroke around the text in a light yellow color */
+/* Making the actual text transparent using -webkit-text-fill-color */
+/* This combination gives the text a stroked outline appearance with transparent fill */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Styling for the body element */
+/* Setting margins and padding to 0 to remove default spacing */
+/* Setting the text color to black */
+/* Setting the font size to 50px */
+/* Setting the font weight to bold */
+
+
+

@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Styling for the entire webpage */
+/* Setting margins and padding to 0 to remove default spacing */
+/* Setting the text color to black */
+/* Setting the font size to 50px */
+/* Setting the font weight to bold */
+
+.marquee {
+  padding-left: 20%;
+  width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  color: #ffeba7;
+}
+
+/* Styling for the marquee container */
+/* Adding left padding of 20% */
+/* Setting the width to 100% */
+/* Setting the height to 200px */
+/* Hiding the horizontal overflow */
+/* Setting the text color to a light yellow (#ffeba7) */
+
+.track {
+  padding-left: 5%;
+  width: inherit;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+  color: #ffeba7;
+}
+
+/* Styling for the content track within the marquee */
+/* Adding left padding of 5% */
+/* Inheriting the width from the parent */
+/* Preventing line breaks within the track */
+/* Using hardware acceleration for smoother animation */
+/* Applying the marquee animation with a duration of 32 seconds, linear timing, and infinite iteration */
+/* Setting the text color to a light yellow (#ffeba7) */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Keyframes for the marquee animation */
+/* Moving the track from the initial position (0) to the left by 50% over the animation duration */
+
+#marqueeBox{
+  display: box;
+  width: 70%;
+  height: auto;
+  border: 1px solid #ffeba7;
+}
+
+/* Styling for the marquee container box */
+/* Using the 'display' property with 'box' value (not a standard CSS value) */
+/* Setting the width to 70% */
+/* Allowing the height to adjust automatically based on content */
+/* Adding a 1px solid border with a light yellow color (#ffeba7) */
+
+

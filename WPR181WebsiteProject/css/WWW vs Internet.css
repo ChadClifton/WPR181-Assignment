@@ -1,0 +1,199 @@
+/* Styling for a grid container with various layout properties */
+.grid{
+  font-family: 'Montserrat', sans-serif; /* Setting the font family for the container */
+  font-weight: 300; /* Setting the font weight to 300 (lighter) */
+  font-size: 15px; /* Setting the font size to 15px */
+  line-height: 1.7; /* Setting the line height to 1.7 (providing spacing between lines) */
+  color: #eeeced; /* Setting the text color to a light gray (#eeeced) */
+  background-color: #1f2029; /* Setting the background color */
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg'); /* Adding a background image */
+  background-position: center; /* Centering the background image */
+  background-repeat: repeat; /* Repeating the background image */
+  background-size: 5%; /* Setting the size of the background image */
+  min-height: 100vh; /* Setting the minimum height to 100% of the viewport height */
+  width: auto; /* Setting the width to auto */
+  display: grid; /* Using grid display */
+  flex-direction: column; /* Setting the flex direction to column (not applicable for grid) */
+  max-width: max-content; /* Setting the maximum width to the content width */
+  grid-template-columns: repeat(8,1fr); /* Creating a grid with 8 columns of equal width */
+  grid-template-rows:minmax(150px,1fr); /* Creating grid rows with a minimum of 150px and maximum of 1fr */
+  row-gap: 120px; /* Adding vertical gap between grid rows */
+}
+
+/* Styling for the header section */
+.header{
+  grid-column: 1/9; /* Spanning the header across all 8 columns */
+  text-align: center; /* Center-aligning the text */
+  grid-row: 1/3; /* Spanning the header across 2 rows */
+}
+
+/* Styling for a section with a specific background image */
+.www{
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+  /* Background image properties (same as above) */
+  grid-column: 1/7; /* Spanning 6 columns */
+  grid-row: 3/4; /* Spanning 1 row */
+  margin-left: 40px; /* Adding left margin */
+  max-height: fit-content; /* Setting the maximum height to content's height */
+  border-radius: 10px; /* Adding border radius */
+  border: 5px solid #ffeba7; /* Adding a solid border with a light yellow color (#ffeba7) */
+}
+
+/* Styling for another section */
+.internet{
+  /* Similar styling to .www with different column and margin values */
+  grid-column: 5/9;
+  grid-row: 4/5;
+  border-radius: 10px;
+  border: 5px solid #ffeba7;
+  max-height: fit-content;
+  margin-right: 50px;
+}
+
+/* Styling for h1 elements */
+h1{
+  font-family: 'Montserrat', sans-serif; /* Setting the font family for h1 */
+  font-weight: 800; /* Setting the font weight to 800 (bold) */
+  font-size: 6vw; /* Setting the font size relative to the viewport width */
+  line-height: 1; /* Setting the line height to 1 */
+  color: #ffeba7; /* Setting the text color to a light yellow (#ffeba7) */
+  text-align: center; /* Center-aligning the text */
+}
+
+/* Styling for underlined h2 elements */
+h2{
+  text-decoration: underline; /* Adding an underline to h2 elements */
+}
+
+/* Styling for underlined and centered h3 elements */
+h3{
+  text-align: center; /* Center-aligning the text */
+  text-decoration: underline; /* Adding an underline to h3 elements */
+}
+
+/* Styling for table data elements */
+td{
+  text-align: left; /* Aligning the text to the left within table data cells */
+}
+
+/* Styling for a table section */
+.table{
+  grid-row-gap: 120px; /* Adding vertical gap between rows */
+  border-radius: 10px; /* Adding border radius */
+  text-align: center; /* Center-aligning the text */
+  border: 5px solid #ffeba7; /* Adding a solid border with a light yellow color (#ffeba7) */
+  margin-left: 60px; /* Adding left margin */
+  margin-right: 200px; /* Adding right margin */
+  grid-column: 2/9; /* Spanning columns 2 to 8 */
+  grid-row:5/6; /* Spanning 1 row */
+  padding: 10px; /* Adding padding */
+  padding-bottom: 150px; /* Adding bottom padding */
+  max-height: 250px; /* Setting maximum height */
+}
+
+/* Styling for table header elements */
+th{
+  background-color: rgb(252, 252, 252); /* Setting the background color */
+  color:black; /* Setting the text color to black */
+  text-align: center; /* Center-aligning the text */
+}
+
+/* Styling for a section centered vertically */
+.section-center{
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Positioning at 50% from the top */
+  left: 0; /* Positioning at 0 from the left */
+  display: block; /* Displaying as a block element */
+  width: 100%; /* Setting the width to 100% */
+ 
+  padding: 0; /* Resetting padding */
+  margin: 0; /* Resetting margin */
+  z-index: 6; /* Setting the stacking order to 6 */
+  text-align: center; /* Center-aligning the text */
+  transform: translateY(-50%); /* Translating the section up by 50% of its own height */
+}
+
+/* Styling for h1 elements */
+h1{
+  font-family: 'Montserrat', sans-serif; /* Setting the font family for h1 */
+  font-weight: 800; /* Setting the font weight to 800 (bold) */
+  font-size: 6vw; /* Setting the font size relative to the viewport width */
+  line-height: 1; /* Setting the line height to 1 */
+  color: #ffeba7; /* Setting the text color to a light yellow (#ffeba7) */
+  text-align: center; /* Center-aligning the text */
+}
+
+/* Styling for an image section */
+.image{
+  row-gap: 500px; /* Adding vertical gap between rows (likely intended margin-top) */
+  grid-row: 3/4; /* Spanning 1 row */
+  grid-column: 8/9; /* Spanning the last column */
+  max-height:300px; /* Setting maximum height for the image */
+  max-width: 380px; /* Setting maximum width for the image */
+  border-radius: 10px; /* Adding border radius */
+  border: 5px solid #ffeba7; /* Adding a solid border with a light yellow color (#ffeba7) */
+  margin-right: 50px; /* Adding right margin */
+  margin-top: 100px; /* Adding top margin */
+}
+
+/* Styling for another image section */
+.image2{
+  grid-row: 4/5; /* Spanning 1 row */
+  grid-column: 1/4; /* Spanning columns 1 to 3 */
+  height:280px; /* Setting height for the image */
+  width: 350px; /* Setting width for the image */
+  border-radius: 10px; /* Adding border radius */
+  border: 5px solid #ffeba7; /* Adding a solid border with a light yellow color (#ffeba7) */
+  margin-left: 43px; /* Adding left margin */
+  margin-top: 55px; /* Adding top margin */
+}
+
+/* Styling for a background text element */
+#textbackground {
+  padding: 1.5em; /* Adding padding */
+  background: rgba(255, 255, 255, 0.2); /* Adding a semi-transparent white background */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adding a box shadow */
+  border-radius: 10px; /* Adding border radius */
+}
+
+/* Styling for a scroll container */
+#scroll-container {
+  height: 900px; /* Setting the container height */
+  overflow-y: scroll; /* Adding vertical scrollbar if content overflows */
+}
+
+/* Styling for the scrollbar */
+#scroll-container::-webkit-scrollbar {
+    width: 7px; /* Setting the scrollbar width */
+    height: 5px; /* Setting the scrollbar height */
+}
+
+#scroll-container::-webkit-scrollbar-track {
+    background: transparent; /* Setting the scrollbar track background */
+    height: 10px; /* Setting the track height */
+}
+
+#scroll-container::-webkit-scrollbar-thumb {
+  background: #ffeba7; /* Setting the scrollbar thumb color */
+  size: 1px; /* Setting the thumb size */
+  height: 10px; /* Setting the thumb height */
+  width: 10x; /* Incorrect value, should likely be '10px' */
+}
+
+#scroll-container::-webkit-scrollbar-thumb:hover {
+    background : rgba(red, rgb(197, 51, 15), rgb(255, 51, 0), 10%); /* Incorrect syntax, should be a valid color value */
+    height: 10px; /* Setting the thumb height */
+} 
+
+#scroll-container::-webkit-scrollbar-button {
+    display: none; /* Hiding the scrollbar button */
+    height: 5px; /* Setting the button height */
+}
+
+ol{
+  list-style: upper-roman; /* Using upper roman numerals as list style */
+}
+
+.BottomWidth{
+  padding: 50px; /* Adding padding to elements with the class 'BottomWidth' */
+}

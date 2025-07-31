@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Internet</title>
+    <link rel="stylesheet" href="./css/webApplcation.css">
+    <link rel="stylesheet" href="./css/navMenu.css">
+</head>
+<body id="scroll-container">
+    <a href="https://front.codes/" class="logo" target="_blank"></a>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="OverviewOfWWW.html" target="_self">Overview of the World Wide Web</a></li>
+            <li><a href="HistoryOfInternet.html" target="_self">History of the internet</a></li>
+            <li><a href="WWW vs Internet.html">WWW vs the internet</a></li>
+            <li><a href="EvolutionOfInternt.html">Evolution of the internet</a></li>
+            <li><a href="internetProtocols.html">Internet protocols</a></li>
+            <li><a href="webApplicationArch.html">Web application architecture</a></li>
+            <li><a href="Client-side and Server-side Engineering.html">Client-side and Server-side Engineering</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <h1>Web Application Architecture</h1>
+
+    <main>
+        <section class="intro">
+            <h2>Intro</h2>
+            <p>When browsing on your favorite web browser ,the lingering thought of how the web application must have crossed at some point. A brief answer to that question is , the request you typed for is then sent to the web servers , web-server processes the request and performs all the necessary logic which is sent to the web browser and displayed on the screen.</p>
+            <p>Web applications have complex architectures that have many components and layers , when a request is inputted each of these layers have to be crossed before displaying data back onto the screen. (Anuupadhyay, n.d.)</p>
+        </section>
+
+        <section class="define">
+            <h2>What is Web Application Architecture ?</h2>
+
+            <img src="./css/images/WAA.png" alt="Blue Print" id="bluePrint">
+
+            <p>Web Application is a program that runs on the browser, it has 3 main characteristics:</p>
+            <ul>
+                <li>Addresses problems (finds information)</li>
+                <li>Interactive</li>
+                <li>Works with the Content Management System</li>
+            </ul>
+            <p>Web Application Architecture controls communication between client and server parts of a program, making sure user requests and interactions between applications, user interfaces , middleware systems , databases ,servers and browsers. The frameworks maintain the relationship between these elements , regardless of application size or complexity.</p>
+        
+            <p>The Web application must address reliability, scalability, security, and robustness due to high internal network traffic volume. The code provided to the browser is crucial indicating how to react to user inputs, this includes sub-components and external interfaces for a complete software  program.</p>
+        </section>        
+
+        <section class="side">
+            <h2>Client-Side and Server-Side</h2>
+
+            <img src="./css/images/webApp.png" alt="Client and Server side" id="clientServer">
+
+            <p>The web applications run both on the client-side and the server-side , when a user puts in a request there are mainly two programs that run:</p>
+            <ul>
+                <li>Code that runs on the browser per user input.</li>
+                <li>Code in the server that responds to HTTP requests.</li>
+            </ul>
+
+            <p>Developers define the functions of server-side code and browser-side in web applications. Server-side code is written in the languages like python , JavaScript# ,PHP and ruby on rails , is responsible for creating user-requested pages and storing data. This is not visible to the end-user , except for malfunctions.</p>
+            <p>Client-side code, consists of HTML , CSS, and JavaScript , is run by the browser and can be viewed and edited by  the user. It communicates to the server through HTTP request and cannot read files off a server directly.</p>
+        </section>
+    </main>
+</body>
+</html>
